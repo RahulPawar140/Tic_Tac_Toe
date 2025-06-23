@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <h2>Enter Player Names</h2>
+            <input type="text" id="player1" placeholder="Player 1 Name (X)" />
+            <input type="text" id="player2" placeholder="Player 2 Name (O)" />
+            <br>
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="startGame(true)">Start Without Names</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" style="display: none;">
+            <h2 id="status">Game Started!</h2>
+
+            <div class="scoreboard">
+                <p id="scoreX">Player X: 0</p>
+                <p id="scoreO">Player O: 0</p>
+            </div>
+
+            <div class="board" id="board">
+                <div class="cell" onclick="makeMove(this, 0)"></div>
+                <div class="cell" onclick="makeMove(this, 1)"></div>
+                <div class="cell" onclick="makeMove(this, 2)"></div>
+                <div class="cell" onclick="makeMove(this, 3)"></div>
+                <div class="cell" onclick="makeMove(this, 4)"></div>
+                <div class="cell" onclick="makeMove(this, 5)"></div>
+                <div class="cell" onclick="makeMove(this, 6)"></div>
+                <div class="cell" onclick="makeMove(this, 7)"></div>
+                <div class="cell" onclick="makeMove(this, 8)"></div>
+            </div>
+
+            <div class="buttons">
+                <button onclick="restartGame()">Restart Game</button>
+                <button onclick="resetToNewPlayers()">New Players</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
